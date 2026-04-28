@@ -1,6 +1,6 @@
 ---
 
-layout: lesson
+layout: default
 title: はじめに
 description: このコースの概要と、なぜRustを学ぶのか
 order: 1
