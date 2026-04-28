@@ -22,3 +22,4 @@ permalink: /rust-from-zero/
 Setup編は後に公開予定です。
 
 - Core編: https://nh0102heiya-lab.github.io/programming-lessons/rust-from-zero/core
+- Setup編: COMING SOON
