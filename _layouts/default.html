@@ -80,5 +80,31 @@
   <main>
     {{ content }}
   </main>
+
+  {% assign pages_in_section = site.pages 
+    | where: "section", page.section 
+    | sort: "order" %}
+
+  {% for p in pages_in_section %}
+    {% if p.url == page.url %}
+      {% assign index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  <nav class="pager">
+    <div>
+      {% if index > 0 %}
+        {% assign prev = pages_in_section[index | minus: 1] %}
+        <a href="{{ prev.url }}">← {{ prev.title }}</a>
+      {% endif %}
+    </div>
+
+    <div>
+      {% if index < pages_in_section.size | minus: 1 %}
+        {% assign next = pages_in_section[index | plus: 1] %}
+        <a href="{{ next.url }}">{{ next.title }} →</a>
+      {% endif %}
+    </div>
+  </nav>
 </body>
 </html>
