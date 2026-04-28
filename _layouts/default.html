@@ -84,43 +84,50 @@
   {% assign parts = page.path | split: '/' %}
   {% assign current_section = parts[0] %}
 
-  {% assign pages_in_section = site.rust-from-zero
-    | where_exp: "p", "p.path | split: '/' | first == current_section"
-    | sort: "order" %}
+  {% assign pages_in_section = "" | split: "" %}
+
+  {% for p in site.rust-from-zero %}
+    {% assign p_parts = p.path | split: "/" %}
+    {% if p_parts[0] == current_section %}
+      {% assign pages_in_section = pages_in_section | push: p %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign pages_in_section = pages_in_section | sort: "order" %}
 
   {% assign my_order = page.order %}
 
   {% assign prev = nil %}
-
-  {% for p in pages_in_section %}
-    {% if p.order < my_order %}
-      {% assign prev = p %}
-    {% endif %}
-  {% endfor %}
-
   {% assign next = nil %}
 
+  {% assign found_current = false %}
+
   {% for p in pages_in_section %}
-    {% if p.order > my_order %}
-      {% assign next = p %}
-      {% break %}
+
+    {% if p.order == my_order %}
+      {% assign found_current = true %}
     {% endif %}
+
+    {% if found_current == false %}
+      {% assign prev = p %}
+    {% endif %}
+
+    {% if found_current == true and next == nil and p.order != my_order %}
+      {% assign next = p %}
+    {% endif %}
+
   {% endfor %}
-
+  
   <nav class="pager">
-    <div>
-      {% if index > 0 %}
-        {% assign prev = pages_in_section[index | minus: 1] %}
-        <a href="{{ prev.url }}">← {{ prev.title }}</a>
-      {% endif %}
-    </div>
 
-    <div>
-      {% if index < pages_in_section.size | minus: 1 %}
-        {% assign next = pages_in_section[index | plus: 1] %}
-        <a href="{{ next.url }}">{{ next.title }} →</a>
-      {% endif %}
-    </div>
+    {% if prev != nil %}
+      <a href="{{ prev.url }}">← {{ prev.title }}</a>
+    {% endif %}
+
+    {% if next != nil %}
+      <a href="{{ next.url }}"> {{ next.title }} →</a>
+    {% endif %}
+
   </nav>
 </body>
 </html>
