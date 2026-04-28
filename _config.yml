@@ -1,4 +1,4 @@
 collections:
-  rust-for-beginners:
+  rust-from-zero:
     output: true
-    permalink: /rust-for-beginners/:name/
+    permalink: /rust-from-zero/:name/
