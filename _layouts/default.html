@@ -81,9 +81,10 @@
     {{ content }}
   </main>
 
-  {% assign pages_in_section = site.pages 
-    | where: "section", page.section 
-    | sort: "order" %}
+  {% assign current_section = page.path | split: '/' | first %}
+  {% assign pages_in_section = site.rust-from-zero
+  | where_exp: "p", "p.path contains current_section"
+  | sort: "path" %}
 
   {% for p in pages_in_section %}
     {% if p.url == page.url %}
