@@ -79,11 +79,8 @@ struct Person {
 }
 ```
 
-* `struct Person`
-  新しい型 `Person` を定義する
-
-* `{ ... }`
-  中に含まれるデータ
+* `struct Person {..}`
+  新しい型 `Person` を定義する。詳しくは、`{..}` に書く
 
 * `name: String`
   名前（文字列）
