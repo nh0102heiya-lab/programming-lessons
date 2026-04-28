@@ -1,4 +1,13 @@
+markdown: kramdown
+highlighter: rouge
+
 collections:
   rust-from-zero:
     output: true
-    permalink: /rust-from-zero/:name/
+
+defaults:
+  - scope:
+      type: rust-from-zero
+    values:
+      layout: default
+      permalink: /rust-from-zero/:path/
