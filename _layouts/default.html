@@ -121,11 +121,11 @@
   <nav class="pager">
 
     {% if prev != nil %}
-      <a href="{{ prev.url }}">← {{ prev.title }}</a>
+      <a href="{{ prev.url | relative_url }}">← {{ prev.title }}</a>
     {% endif %}
 
     {% if next != nil %}
-      <a href="{{ next.url }}"> {{ next.title }} →</a>
+      <a href="{{ next.url | relative_url }}"> {{ next.title }} →</a>
     {% endif %}
 
   </nav>
