@@ -1,0 +1,4 @@
+collections:
+  rust-for-beginners:
+    output: true
+    permalink: /rust-for-beginners/:name/
