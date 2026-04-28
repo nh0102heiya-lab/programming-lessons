@@ -66,6 +66,35 @@
       overflow-x: auto;
       border-radius: 8px;
     }
+
+    .pager {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .pager a {
+    flex: 1;
+    text-decoration: none;
+    color: var(--text);
+    background: var(--code-bg);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: 0.15s ease;
+  }
+
+  .pager a:hover {
+    transform: translateY(-2px);
+    border-color: var(--muted);
+  }
+
+  .pager a:only-child {
+    max-width: 50%;
+  }
   </style>
 </head>
 <body>
@@ -73,6 +102,9 @@
     <h1>{{ page.title }}</h1>
     <div class="meta">
       最終更新: {{ page.updated }}
+    </div>
+    <div class="description">
+      {{ page.description }}
     </div>
     <hr>
   </header>
