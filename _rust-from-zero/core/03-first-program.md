@@ -148,6 +148,7 @@ fn main() {
 ## ヒント（クリックで表示）
 
 <details markdown="1">
+  <summary>ヒント</summary>
 
 * `println!` は何回でも書くことができます
 * 1回につき1行表示されます
