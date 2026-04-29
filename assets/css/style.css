@@ -1,12 +1,12 @@
 :root {
-  --bg: #ffffff;
-  --text: #111111;
-  --muted: #666;
-  --border: #e5e5e5;
-  --code-bg: #f6f8fa;
+  --bg: #f7f7f8;
+  --text: #1a1a1a;
+  --muted: #5f6368;
+  --border: #e3e3e3;
+  --code-bg: #f1f3f5;
 
-  --link: #0969da;
-  --link-hover: #0550ae;
+  --link: #0b5fff;
+  --link-hover: #0847c7;
 }
 
 @media (prefers-color-scheme: dark) {
