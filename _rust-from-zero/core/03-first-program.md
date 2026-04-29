@@ -14,7 +14,9 @@ Rustを学ぶ最初の一歩として、まずは「コードを実際に動か�
 
 まずはブラウザで Rust Playground を開きます。
 
-[https://play.rust-lang.org/](https://play.rust-lang.org/)
+<a href="https://play.rust-lang.org/" target="_blank" rel="noopener noreferrer">
+  Rust Playground
+</a>
 
 このサイトでは、Rust のプログラムを書き、オンラインで実行することができます。
 
