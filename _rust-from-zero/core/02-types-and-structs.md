@@ -1,5 +1,4 @@
 ---
-
 layout: default
 title: 「型」とは？
 description: プログラミングの基本概念である「型」について説明
