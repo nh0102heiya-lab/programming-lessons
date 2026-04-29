@@ -7,6 +7,9 @@
 
   --link: #0b5fff;
   --link-hover: #0847c7;
+
+  --note-bg: #eff6ff;
+  --note-border: #3b82f6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +22,9 @@
 
     --link: #58a6ff;
     --link-hover: #79c0ff;
+
+    --note-bg: #141516;
+    --note-border: #2c5eb0;
   }
 }
 
@@ -101,9 +107,9 @@ pre {
 }
 
 .note {
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid var(--note-border);
   padding-left: 12px;
-  background: #f0f6ff;
+  background: var(--note-bg);
 }
 
 .pager {
