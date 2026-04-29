@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Rust Playgroundで最初のコードを動かす"
+title: Rust Playgroundで最初のコードを動かす
+description: Rust Playgroundを使って実際にWeb上でコードを動かします
 order: 3
 section: core
 updated: 2026-04-29
