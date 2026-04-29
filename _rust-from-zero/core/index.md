@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 title: Redirecting...
 permalink: /rust-from-zero/core/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 title: Rust from Zero
 permalink: /rust-from-zero/
 ---
