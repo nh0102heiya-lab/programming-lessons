@@ -147,7 +147,7 @@ fn main() {
 
 ## ヒント（クリックで表示）
 
-<details>
+<details markdown="1">
 
 * `println!` は何回でも書くことができます
 * 1回につき1行表示されます
