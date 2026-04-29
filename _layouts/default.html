@@ -12,6 +12,9 @@
       --muted: #666;
       --border: #e5e5e5;
       --code-bg: #f6f8fa;
+
+      --link: #0969da;
+      --link-hover: #0550ae;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -21,7 +24,20 @@
         --muted: #8b949e;
         --border: #30363d;
         --code-bg: #161b22;
+
+        --link: #58a6ff;
+        --link-hover: #79c0ff;
       }
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
     }
 
     body {
