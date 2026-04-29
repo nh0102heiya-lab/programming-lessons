@@ -143,3 +143,8 @@ pre {
   font-size: 0.9rem;
   user-select: none;
 }
+
+.comments {
+  max-width: 720px;
+  margin: 40px auto 0;
+}
