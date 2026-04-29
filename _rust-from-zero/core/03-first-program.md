@@ -135,6 +135,9 @@ My first Rust code!
 
 ---
 
+<details markdown="1">
+  <summary>課題を見る</summary>
+
 次のプログラムを実行すると、1行だけ文字が表示されます。
 
 ```rust
@@ -153,6 +156,7 @@ fn main() {
   <summary>ヒント</summary>
 
 * `println!` は何回でも書くことができます
+* `println!(..` の後には必ず「`;`（セミコロン）」が必要です
 * 1回につき1行表示されます
 
 </details>
@@ -177,6 +181,6 @@ fn main() {
 ## この課題のポイント
 
 * `println!` は複数回使える
-* 1回 = 1行出力
+* 1つの`println!` = 1行出力する
 
-
+</details>
