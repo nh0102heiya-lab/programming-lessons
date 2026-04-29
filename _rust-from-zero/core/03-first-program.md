@@ -145,10 +145,14 @@ fn main() {
 
 ---
 
-## ヒント
+## ヒント（クリックで表示）
+
+<details>
 
 * `println!` は何回でも書くことができます
 * 1回につき1行表示されます
+
+</details>
 
 ---
 
@@ -157,7 +161,7 @@ fn main() {
 <details>
   <summary>答えを見る</summary>
 
-```rust id="k9q2x1"
+```rust
 fn main() {
     println!("Hello, Rust!");
     println!("Welcome!");
