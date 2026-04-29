@@ -158,7 +158,7 @@ fn main() {
 
 ## 解答（クリックで表示）
 
-<details>
+<details markdown="1">
   <summary>答えを見る</summary>
 
 ```rust
