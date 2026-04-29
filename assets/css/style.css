@@ -1,6 +1,7 @@
 :root {
   --bg: #f7f7f8;
   --text: #1a1a1a;
+  --mid: #3b3f44;
   --muted: #5f6368;
   --border: #e3e3e3;
   --code-bg: #f1f3f5;
@@ -16,6 +17,7 @@
   :root {
     --bg: #0d1117;
     --text: #e6edf3;
+    --mid: #c9d1d9;
     --muted: #8b949e;
     --border: #30363d;
     --code-bg: #161b22;
@@ -23,8 +25,8 @@
     --link: #58a6ff;
     --link-hover: #79c0ff;
 
-    --note-bg: #141516;
-    --note-border: #2c5eb0;
+    --note-bg: #0f172a;
+    --note-border: #60a5fa;
   }
 }
 
@@ -108,6 +110,7 @@ pre {
 
 details {
   margin-left: 0;
+  color: var(--mid);
 }
 
 details > *:not(summary) {
@@ -118,6 +121,7 @@ details > *:not(summary) {
   border-left: 4px solid var(--note-border);
   padding-left: 12px;
   background: var(--note-bg);
+  color: var(--mid);
 }
 
 .pager {
