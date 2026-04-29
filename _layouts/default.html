@@ -77,6 +77,10 @@
 
     {% if next != nil %}
       <a href="{{ next.url | relative_url }}"> {{ next.title }} →</a>
+    {% else %}
+      {% unless page.series_final %}
+        <span class="continuation">続く</span>
+      {% endunless %}
     {% endif %}
 
   </nav>
