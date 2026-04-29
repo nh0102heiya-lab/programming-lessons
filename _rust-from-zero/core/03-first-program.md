@@ -133,8 +133,6 @@ My first Rust code!
 
 早く進みたい人は、先に次に行ってしまっても問題ありません。
 
----
-
 <details markdown="1">
   <summary>課題を見る</summary>
 
