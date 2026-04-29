@@ -118,7 +118,8 @@ details > *:not(summary) {
 }
 
 footer {
-  margin-top: 40px;
+  max-width: 720px;
+  margin: 40px auto 40px;
   padding: 20px 0;
   border-top: 1px solid var(--border);
   text-align: center;
