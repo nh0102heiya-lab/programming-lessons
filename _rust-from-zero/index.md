@@ -2,7 +2,7 @@
 layout: index
 title: Rust from Zero
 permalink: /rust-from-zero/
-description: プログラミングをまったく知らない人を対象にした、プログラミング言語 Rust 入門です
+description: プログラミングをまったく知らない人を対象にした、プログラミング言語 Rust 入門
 ---
 
 # Rust from Zero
