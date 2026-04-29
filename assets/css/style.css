@@ -106,6 +106,14 @@ pre {
   border-radius: 8px;
 }
 
+details {
+  margin-left: 0;
+}
+
+details > *:not(summary) {
+  padding-left: 16px;
+}
+
 .note {
   border-left: 4px solid var(--note-border);
   padding-left: 12px;
