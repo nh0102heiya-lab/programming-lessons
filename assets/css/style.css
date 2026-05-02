@@ -102,12 +102,11 @@ td code,
 th code,
 div.highlighter-rouge {
   background: var(--code-bg);
-  padding: 10px;
   border-radius: 6px;
   margin: 20px 0;
 }
 
-pre.highlight {
+pre {
   background: var(--code-bg);
   padding: 12px;
   overflow-x: auto;
