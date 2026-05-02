@@ -111,6 +111,7 @@ pre {
   padding: 12px;
   overflow-x: auto;
   border-radius: 8px;
+  margin: 0;
 }
 
 details {
