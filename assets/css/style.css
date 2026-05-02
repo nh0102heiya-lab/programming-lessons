@@ -95,7 +95,12 @@ hr {
   margin-top: 8px;
 }
 
-code {
+/* inline code only */
+p code,
+li code,
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
+td code,
+th code {
   background: var(--code-bg);
   padding: 2px 6px;
   border-radius: 6px;
