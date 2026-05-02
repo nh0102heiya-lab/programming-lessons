@@ -32,13 +32,13 @@ fn main() {
 「あいさつを表示する関数」を作ってみましょう。
 
 ```rust
-fn main() {
-    greet();
-}
-
 fn greet() {
     println!("Hello, Rust!");
     println!("Welcome!");
+}
+
+fn main() {
+    greet();
 }
 ```
 
@@ -94,14 +94,14 @@ greet();
 例えばこう書くこともできます：
 
 ```rust
+fn greet() {
+    println!("Hello!");
+}
+
 fn main() {
     greet();
     greet();
     greet();
-}
-
-fn greet() {
-    println!("Hello!");
 }
 ```
 
