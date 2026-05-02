@@ -1,7 +1,6 @@
 markdown: kramdown
 highlighter: rouge
 baseurl: "/programming-lessons"
-theme: midnight
 
 collections:
   rust-from-zero:
