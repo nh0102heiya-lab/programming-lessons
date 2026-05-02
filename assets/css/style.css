@@ -107,7 +107,7 @@ div.highlighter-rouge {
   margin: 20px 0;
 }
 
-div.highlight pre {
+pre.highlight {
   background: var(--code-bg);
   padding: 12px;
   overflow-x: auto;
