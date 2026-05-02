@@ -102,7 +102,7 @@ td code,
 th code,
 div.highlighter-rouge {
   background: var(--code-bg);
-  padding: 2px 6px;
+  padding: 2px;
   border-radius: 6px;
 }
 
