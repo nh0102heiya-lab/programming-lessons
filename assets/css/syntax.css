@@ -114,3 +114,86 @@
   color: #24292f;
   font-weight: bold;
 }
+
+@media (prefers-color-scheme: dark) {
+  .highlight, .highlight .w {
+    color: #e6edf3;
+    background-color: #0d1117;
+  }
+  .highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv {
+    color: #ff7b72;
+  }
+  .highlight .gr {
+    color: #0d1117;
+  }
+  .highlight .gd {
+    color: #ffdcd7;
+    background-color: #67060c;
+  }
+  .highlight .nb,
+  .highlight .nc,
+  .highlight .no,
+  .highlight .nn {
+    color: #ffa657;
+  }
+  .highlight .sr,
+  .highlight .na,
+  .highlight .nt,
+  .highlight .gi {
+    color: #7ee787;
+  }
+  .highlight .gi {
+    background-color: #033a16;
+  }
+  .highlight .kc,
+  .highlight .l,
+  .highlight .m,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .il,
+  .highlight .mo,
+  .highlight .mx,
+  .highlight .sb,
+  .highlight .bp,
+  .highlight .ne,
+  .highlight .nl,
+  .highlight .py,
+  .highlight .nv,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi,
+  .highlight .vm,
+  .highlight .o,
+  .highlight .ow {
+    color: #79c0ff;
+  }
+  .highlight .s,
+  .highlight .sa,
+  .highlight .sc,
+  .highlight .dl,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .se,
+  .highlight .sh,
+  .highlight .sx,
+  .highlight .s1,
+  .highlight .ss {
+    color: #a5d6ff;
+  }
+  .highlight .nd,
+  .highlight .nf,
+  .highlight .fm {
+    color: #d2a8ff;
+  }
+  .highlight .c,
+  .highlight .cm,
+  .highlight .c1,
+  .highlight .cs {
+    color: #8b949e;
+  }
+  .highlight .err {
+    color: #f0f6fc;
+    background-color: #8e1519;
+  }
+}
