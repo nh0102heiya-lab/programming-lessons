@@ -118,10 +118,7 @@ pre {
 details {
   margin-left: 0;
   color: var(--mid);
-}
-
-details > *:not(summary) {
-  padding-left: 16px;
+  padding: inherit;
 }
 
 footer {
