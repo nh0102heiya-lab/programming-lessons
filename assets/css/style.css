@@ -116,10 +116,25 @@ pre {
 }
 
 details {
-  margin-left: 0;
-  color: var(--mid);
-  padding: inherit;
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--note-bg);
+  color: var(--text);
 }
+
+/* タイトル部分 */
+details > summary {
+  font-weight: 600;
+  color: var(--mid);
+  cursor: pointer;
+}
+
+summary::marker {
+  color: var(--muted);
+}
+
 
 footer {
   max-width: 720px;
