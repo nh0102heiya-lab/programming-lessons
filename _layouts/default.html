@@ -14,6 +14,43 @@
   <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
 </head>
 <body>
+  <nav class="sidebar">
+    <div class="course-nav">
+      <div class="breadcrumb">
+        <a href="{{ '/rust-from-zero/' | relative_url }}">Rust from Zero</a>
+        {% for chapter in site.data.chapters %}
+          {% if chapter.id == page.section %}
+            &gt; 第{{ chapter.number }}章: {{ chapter.title }}
+          {% endif %}
+        {% endfor %}
+        &gt; {{ page.title }}
+      </div>
+
+      <div class="chapters">
+        {% for chapter in site.data.chapters %}
+        {% assign chapter_pages = site.rust-from-zero | where: "section", chapter.id | where_exp: "p", "p.redirect != true" | sort: "order" %}
+        {% if chapter_pages.size > 0 %}
+        <div class="chapter {% if page.section == chapter.id %}chapter-current{% endif %}" data-chapter="{{ chapter.id }}">
+          <div class="chapter-header" role="button" tabindex="0" aria-expanded="{% if page.section == chapter.id %}true{% else %}false{% endif %}">
+            <span class="chapter-label">第{{ chapter.number }}章</span>
+            <span class="chapter-name">{{ chapter.title }}</span>
+            <span class="chapter-toggle">{% if page.section == chapter.id %}−{% else %}+{% endif %}</span>
+          </div>
+          <ul class="article-list {% if page.section != chapter.id %}collapsed{% endif %}">
+            {% for p in chapter_pages %}
+            <li class="{% if p.url == page.url %}article-current{% endif %}">
+              <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </nav>
+
+  <div class="content">
   <header>
     <h1>{{ page.title }}</h1>
     <div class="meta">
@@ -29,19 +66,15 @@
     {{ content }}
   </main>
 
-  {% assign parts = page.path | split: '/' %}
-  {% assign current_section = parts[0] %}
+  {% assign all_pages = site.rust-from-zero | sort: "order" %}
 
-  {% assign pages_in_section = "" | split: "" %}
+  {% assign pages_chain = "" | split: "" %}
 
-  {% for p in site.rust-from-zero %}
-    {% assign p_parts = p.path | split: "/" %}
-    {% if p_parts[0] == current_section %}
-      {% assign pages_in_section = pages_in_section | push: p %}
-    {% endif %}
+  {% for p in all_pages %}
+    {% unless p.redirect %}
+      {% assign pages_chain = pages_chain | push: p %}
+    {% endunless %}
   {% endfor %}
-
-  {% assign pages_in_section = pages_in_section | sort: "order" %}
 
   {% assign my_order = page.order %}
 
@@ -50,9 +83,9 @@
 
   {% assign found_current = false %}
 
-  {% for p in pages_in_section %}
+  {% for p in pages_chain %}
 
-    {% if p.order == my_order %}
+    {% if p.order == my_order and p.url == page.url %}
       {% assign found_current = true %}
     {% endif %}
 
@@ -60,7 +93,7 @@
       {% assign prev = p %}
     {% endif %}
 
-    {% if found_current == true and next == nil and p.order != my_order %}
+    {% if found_current == true and next == nil and p.url != page.url %}
       {% assign next = p %}
     {% endif %}
 
@@ -100,5 +133,19 @@
             async>
     </script>
   </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.chapter-header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var list = this.parentElement.querySelector('.article-list');
+        var toggle = this.querySelector('.chapter-toggle');
+        var isCollapsed = list.classList.contains('collapsed');
+        list.classList.toggle('collapsed');
+        this.setAttribute('aria-expanded', isCollapsed);
+        toggle.textContent = isCollapsed ? '−' : '+';
+      });
+    });
+  </script>
 </body>
 </html>

@@ -70,6 +70,25 @@ body {
   color: var(--text);
   font-family: system-ui, sans-serif;
   line-height: 1.6;
+  display: flex;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  box-sizing: border-box;
+  background: var(--bg);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
 }
 
 header {
@@ -95,6 +114,10 @@ hr {
   margin-top: 8px;
 }
 
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
 p code,
 li code,
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
@@ -108,6 +131,7 @@ div.highlighter-rouge {
 }
 
 pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   background: var(--code-bg);
   padding: 12px;
   overflow-x: auto;
@@ -218,4 +242,145 @@ footer a:hover {
 .comments {
   max-width: 720px;
   margin: 40px auto 60px;
+}
+
+/* Course navigation */
+.course-nav {
+  padding: 0;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  word-break: break-all;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chapter {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--code-bg);
+  opacity: 0.6;
+  transition: 0.15s ease;
+}
+
+.chapter:hover {
+  opacity: 0.8;
+}
+
+.chapter-current {
+  opacity: 1;
+  border-color: var(--note-border);
+  background: var(--note-bg);
+}
+
+.chapter-header {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.chapter-header:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.chapter-header > :first-child {
+  flex: 1;
+}
+
+.chapter-toggle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.chapter-current .chapter-toggle {
+  color: var(--note-border);
+}
+
+.chapter-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chapter-current .chapter-label {
+  color: var(--note-border);
+}
+
+.chapter-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  max-height: 300px;
+  opacity: 1;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+.article-list.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.article-list li {
+  font-size: 13px;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.article-list li a {
+  color: var(--mid);
+  text-decoration: none;
+}
+
+.article-list li a:hover {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.article-list .article-current {
+  background: var(--border);
+  font-weight: 600;
+}
+
+.article-list .article-current a {
+  color: var(--text);
 }
