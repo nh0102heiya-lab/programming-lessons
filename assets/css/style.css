@@ -159,6 +159,35 @@ summary::marker {
   color: var(--muted);
 }
 
+/* 課題セクション */
+.exercise {
+  border: 2px solid #e67e22;
+  border-left: 6px solid #e67e22;
+  background: #fef9ef;
+  padding: 18px 20px;
+  margin: 24px 0;
+  box-shadow: 0 2px 8px rgba(230, 126, 34, 0.15);
+}
+
+.exercise > summary {
+  font-size: 1.1em;
+  font-weight: 800;
+  color: #c9600e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .exercise {
+    border-color: #f0a050;
+    border-left-color: #f0a050;
+    background: #1a1108;
+    box-shadow: 0 2px 8px rgba(240, 160, 80, 0.1);
+  }
+
+  .exercise > summary {
+    color: #f0a050;
+  }
+}
+
 
 footer {
   max-width: 720px;

@@ -138,7 +138,7 @@ x は 2
 
 ## 課題
 
-<details markdown="1">
+<details markdown="1" class="exercise">
   <summary>課題を見る</summary>
 
 次のプログラムの `____` の部分を埋めて、`message` という変数に `"Hello, variables!"` という文字列を入れて、画面に表示するプログラムを完成させてください。

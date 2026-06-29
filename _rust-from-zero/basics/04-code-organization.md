@@ -111,7 +111,7 @@ fn main() {
 
 ## 課題
 
-<details markdown="1">
+<details markdown="1" class="exercise">
   <summary>課題を見る</summary>
 
 次のプログラムは、`main` の中にすべての処理が書かれています。

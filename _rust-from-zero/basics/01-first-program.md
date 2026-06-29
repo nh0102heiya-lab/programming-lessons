@@ -134,7 +134,7 @@ My first Rust code!
 
 早く進みたい人は、先に次に行ってしまっても問題ありません。
 
-<details markdown="1">
+<details markdown="1" class="exercise">
   <summary>課題を見る</summary>
 
 次のプログラムを実行すると、1行だけ文字が表示されます。
