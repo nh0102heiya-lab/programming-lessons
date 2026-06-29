@@ -50,7 +50,11 @@
     </div>
   </nav>
 
+  <div class="sidebar-backdrop"></div>
+
   <div class="content">
+  <button class="menu-toggle" aria-label="メニューを開く">☰</button>
+
   <header>
     <h1>{{ page.title }}</h1>
     <div class="meta">
@@ -146,6 +150,30 @@
         toggle.textContent = isCollapsed ? '−' : '+';
       });
     });
+
+    var menuToggle = document.querySelector('.menu-toggle');
+    var sidebar = document.querySelector('.sidebar');
+    var backdrop = document.querySelector('.sidebar-backdrop');
+    if (menuToggle && sidebar && backdrop) {
+      function closeSidebar() {
+        document.body.classList.remove('sidebar-open');
+        menuToggle.setAttribute('aria-label', 'メニューを開く');
+        menuToggle.textContent = '☰';
+      }
+      function openSidebar() {
+        document.body.classList.add('sidebar-open');
+        menuToggle.setAttribute('aria-label', 'メニューを閉じる');
+        menuToggle.textContent = '✕';
+      }
+      menuToggle.addEventListener('click', function() {
+        if (document.body.classList.contains('sidebar-open')) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+      backdrop.addEventListener('click', closeSidebar);
+    }
   </script>
 </body>
 </html>
