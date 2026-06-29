@@ -53,15 +53,18 @@
   <div class="sidebar-backdrop"></div>
 
   <div class="content">
-  <button class="menu-toggle" aria-label="メニューを開く">☰</button>
-
   <header>
-    <h1>{{ page.title }}</h1>
-    <div class="meta">
-      最終更新: {{ page.updated }}
-    </div>
-    <div class="description">
-      {{ page.description }}
+    <div class="header-row">
+      <button class="menu-toggle" aria-label="メニューを開く">☰</button>
+      <div class="header-text">
+        <h1>{{ page.title }}</h1>
+        <div class="meta">
+          最終更新: {{ page.updated }}
+        </div>
+        <div class="description">
+          {{ page.description }}
+        </div>
+      </div>
     </div>
     <hr>
   </header>
