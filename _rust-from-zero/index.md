@@ -22,5 +22,10 @@ description: プログラミングをまったく知らない人を対象にし�
 現在製作途中で、Core編のいくつかの記事が公開されています。
 Setup編は後に公開予定です。
 
-- Core編: <a href="{{ '/rust-from-zero/core' | relative_url }}">rust-from-zero/core</a>
+## Core編 章構成
+
+- <a href="{{ '/rust-from-zero/introduction' | relative_url }}">第1章: 導入</a> — コースの概要、Rustを学ぶ理由
+- <a href="{{ '/rust-from-zero/basics/01-first-program' | relative_url }}">第2章: 基本を動かす</a> — Rust Playground、最初のコード、関数
+- <a href="{{ '/rust-from-zero/data-types/01-types' | relative_url }}">第3章: データと型</a> — 型の概念、構造体
+
 - Setup編: COMING SOON

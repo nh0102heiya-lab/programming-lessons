@@ -1,0 +1,11 @@
+- id: introduction
+  title: 導入
+  number: 1
+
+- id: basics
+  title: 基本を動かす
+  number: 2
+
+- id: data-types
+  title: データと型
+  number: 3
