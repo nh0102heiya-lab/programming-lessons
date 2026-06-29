@@ -2,7 +2,7 @@
 layout: default
 title: 構造体（struct）で型を組み合わせる
 description: 複数の型を組み合わせて新しい型を作る方法を学ぶ
-order: 6
+order: 7
 section: data-types
 updated: 2026-04-28
 ---
