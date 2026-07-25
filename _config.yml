@@ -6,9 +6,22 @@ collections:
   rust-from-zero:
     output: true
     permalink: /rust-from-zero/:path/
+  rust-egui:
+    output: true
+    permalink: /rust-egui/:path/
 
 defaults:
   - scope:
       type: rust-from-zero
     values:
       layout: default
+      course: rust-from-zero
+      course_title: "Rust from Zero"
+      course_chapters: chapters
+  - scope:
+      type: rust-egui
+    values:
+      layout: default
+      course: rust-egui
+      course_title: "Rust egui"
+      course_chapters: egui-chapters

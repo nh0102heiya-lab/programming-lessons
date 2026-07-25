@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
 </head>
 <body>
+  {%- assign collection = site[page.course] -%}
+  {%- assign chapter_data = site.data[page.course_chapters] -%}
+
   <nav class="sidebar">
     <div class="course-nav">
       <div class="breadcrumb">
-        <a href="{{ '/rust-from-zero/' | relative_url }}">Rust from Zero</a>
-        {% for chapter in site.data.chapters %}
+        <a href="{{ page.course | append: '/' | relative_url }}">{{ page.course_title }}</a>
+        {% for chapter in chapter_data %}
           {% if chapter.id == page.section %}
             &gt; 第{{ chapter.number }}章: {{ chapter.title }}
           {% endif %}
@@ -27,8 +30,8 @@
       </div>
 
       <div class="chapters">
-        {% for chapter in site.data.chapters %}
-        {% assign chapter_pages = site.rust-from-zero | where: "section", chapter.id | where_exp: "p", "p.redirect != true" | sort: "order" %}
+        {% for chapter in chapter_data %}
+        {% assign chapter_pages = collection | where: "section", chapter.id | where_exp: "p", "p.redirect != true" | sort: "order" %}
         {% if chapter_pages.size > 0 %}
         <div class="chapter {% if page.section == chapter.id %}chapter-current{% endif %}" data-chapter="{{ chapter.id }}">
           <div class="chapter-header" role="button" tabindex="0" aria-expanded="{% if page.section == chapter.id %}true{% else %}false{% endif %}">
@@ -73,7 +76,7 @@
     {{ content }}
   </main>
 
-  {% assign all_pages = site.rust-from-zero | sort: "order" %}
+  {% assign all_pages = collection | sort: "order" %}
 
   {% assign pages_chain = "" | split: "" %}
 
