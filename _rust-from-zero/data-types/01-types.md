@@ -2,7 +2,7 @@
 layout: default
 title: 「型」とは？
 description: プログラミングの基本概念である「型」について説明
-order: 6
+order: 9
 section: data-types
 updated: 2026-04-28
 ---
