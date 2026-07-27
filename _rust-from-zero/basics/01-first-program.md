@@ -4,7 +4,7 @@ title: Rust Playgroundで最初のコードを動かす
 description: Rust Playgroundを使って実際にWeb上でコードを動かします
 order: 2
 section: basics
-updated: 2026-05-02
+updated: 2026-07-27
 ---
 
 Rustを学ぶ最初の一歩として、まずは「コードを実際に動かすこと」に慣れます。  
@@ -34,7 +34,7 @@ fn main() {
 
 まずは先ほどのコードを実行します。上側にある、「RUN ▶」というボタンを押しましょう。
 
-実行すると、画面下側に新しい小窓が開き、に次のように表示されます。
+実行すると、画面下側に新しい小窓が開き、次のように表示されます。
 
 ```console
 Execution
